@@ -5,9 +5,11 @@
 数据库的连接，获取一个handler。
 
 DataBaseAddr, DataBaseUser, DataBasePassWord分别为数据库地址，用户名，密码
+
 mongoHandler, err := mongo.NewHandler(DataBaseAddr, DataBaseUser, DataBasePassWord)
 
 获取集合连接，其中dbName, colName 分别是数据库名和集合名
+
 col := mongoHandler.Collection(dbName, colName)
 
 col即为数据dbName的colName集合的连接。
